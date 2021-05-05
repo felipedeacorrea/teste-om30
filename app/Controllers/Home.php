@@ -9,7 +9,7 @@ class Home extends BaseController
         $this->data['description'] = 'Dashboard AppClicar';
 
 		echo view('templates/principal/header');
-		echo view('home/index', $this->data);
+		echo view('/administrador/home/index', $this->data);
 		echo view('templates/principal/footer');
 	}
 }

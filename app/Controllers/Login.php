@@ -18,7 +18,7 @@ class Login extends BaseController
     {
         $data['title'] = ['modulo' => 'LOGIN', 'icone' => 'fa fa-list'];
         echo view('templates/login/header');
-        echo view('login/index', $data);
+        echo view('/administrador/login/index', $data);
         echo view('templates/login/footer');
     }
 
@@ -26,7 +26,7 @@ class Login extends BaseController
     {
         $data['title'] = ['modulo' => 'LOGIN', 'icone' => 'fa fa-list'];
         echo view('templates/login/header');
-        echo view('login/recuperar_senha', $data);
+        echo view('/administrador/login/recuperar_senha', $data);
         echo view('templates/login/footer');
     }
 
