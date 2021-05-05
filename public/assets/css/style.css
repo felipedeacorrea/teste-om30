@@ -1,0 +1,15 @@
+/*TELA DE LOGIN*/
+
+.form-simple input[type="text"] {
+    margin-bottom: 15px;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+form .form-group {
+    margin-bottom: 0.5rem;
+}
+
+html body.bg-full-screen-image {
+    background: #497965;
+}

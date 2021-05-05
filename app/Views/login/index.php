@@ -41,7 +41,7 @@
                                                 <i class="la la-key"></i>
                                             </div>
                                         </fieldset>
-                                        <button type="submit" class="btn btn-danger btn-block"><i class="ft-unlock"></i>
+                                        <button type="submit" class="btn btn-success btn-block"><i class="ft-unlock"></i>
                                             ACESSAR
                                         </button>
                                     </form>
