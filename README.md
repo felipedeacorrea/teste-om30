@@ -18,3 +18,12 @@ ViaCEP - https://viacep.com.br/
 
 ### PENDENCIAS
 - Validação de CNS
+
+### BANCO DE DADOS
+- Migrations das tabelas criadas
+- DUMP com o usuario do painel dentro do diretorio banco (user: master | pass: master)
+
+### Resumo
+O sistema tem:
+- Ambiente de login
+- CRUD de pacientes
