@@ -11,3 +11,10 @@ Desenvolver um cadastro de pacientes, do qual possamos testar toda sua capacidad
 
 ### Integrações externa
 ViaCEP - https://viacep.com.br/
+
+### VALIDAÇÕES
+#### Cadastro de pacientes
+- Validação dos campos obrigatorios no backend
+
+### PENDENCIAS
+- Validação de CNS

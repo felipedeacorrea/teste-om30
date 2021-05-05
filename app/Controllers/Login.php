@@ -14,22 +14,26 @@ class Login extends BaseController
         $this->usuarios_model = new UsuariosModel();
     }
 
+    // METODO RESPONSAVEL POR RENDERIZAR A TELA DE LOGIN
     public function index()
     {
+
+
+//        $listPost = [];
+//        $listPost['usuario'] = 'master';
+//        $listPost['senha'] = md5('master');
+//        $listPost['status'] = 1;
+//
+//        $this->usuarios_model->save($listPost);
+
+
         $data['title'] = ['modulo' => 'LOGIN', 'icone' => 'fa fa-list'];
         echo view('templates/login/header');
         echo view('/administrador/login/index', $data);
         echo view('templates/login/footer');
     }
 
-    public function recuperar_senha()
-    {
-        $data['title'] = ['modulo' => 'LOGIN', 'icone' => 'fa fa-list'];
-        echo view('templates/login/header');
-        echo view('/administrador/login/recuperar_senha', $data);
-        echo view('templates/login/footer');
-    }
-
+    // METODO RESPONSAVEL PELA AUTENTICAÇÃO
     public function autenticar()
     {
         $dados = $this->request->getvar();
@@ -66,18 +70,7 @@ class Login extends BaseController
         }
     }
 
-    public function filter($table, $key, $value)
-    {
-        $database = $this->factory->createDatabase();
-
-        $return = $database->getReference($table)
-            ->orderByChild($key)
-            ->equalTo($value)
-            ->getSnapshot();
-
-        return $return->getValue();
-    }
-
+    // METODO RESPONSAVEL POR DESLOGAR
     public function logout()
     {
         $session = session();

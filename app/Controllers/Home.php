@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
+    // METODO RESPONSAVEL POR RENDERIZAR A HOME/DASHBOARD
 	public function index()
 	{
         $this->data['title'] = 'Dashboard';

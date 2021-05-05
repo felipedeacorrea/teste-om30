@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use CodeIgniter\Model;
@@ -15,21 +16,13 @@ class UsuariosModel extends Model
     ];
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
-    protected $createdField  = 'data_criado';
-    protected $updatedField  = 'data_atualizado';
-    protected $deletedField  = 'data_deletado';
-
-    public function __construct() {
-        parent::__construct();
-        $this->table = 'usuarios';
-    }
+    protected $createdField = 'data_criado';
+    protected $updatedField = 'data_atualizado';
+    protected $deletedField = 'data_deletado';
 
     public function getUsuarios($id = false)
     {
-
-//        return $this->db;
-        if ($id === false)
-        {
+        if ($id === false) {
             return $this->findAll();
         }
 

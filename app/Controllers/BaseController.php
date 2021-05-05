@@ -14,10 +14,7 @@ namespace App\Controllers;
  * @package CodeIgniter
  */
 
-use App\Libraries\Cimsg;
 use CodeIgniter\Controller;
-use Kreait\Firebase\Factory;
-use Kreait\Firebase\ServiceAccount;
 
 class BaseController extends Controller
 {

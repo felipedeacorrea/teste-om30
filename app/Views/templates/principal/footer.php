@@ -87,11 +87,7 @@
 <!-- Custom JS -->
 <script src="../../../assets/js/scripts.js"></script>
 <script src="../../../assets/js/buscacep.js"></script>
-<script src="../../../assets/js/busca-cnpj.js"></script>
 <script src="../../../assets/js/app.js"></script>
-
-
-<script src="../../../app-assets/js/scripts/forms/validation/form-validation.js"></script>
 
 <script>
     var flash = JSON.parse('<?= ((new \App\Libraries\Cimsg())->getFlash() ?? null); ?>');

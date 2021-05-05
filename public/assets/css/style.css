@@ -13,3 +13,16 @@ form .form-group {
 html body.bg-full-screen-image {
     background: #497965;
 }
+
+/*PACIENTES*/
+.table th, .table td {
+    padding: 0.2rem .7rem;
+}
+
+.table th p, .table td p {
+    margin-bottom: 0px;
+}
+
+.media {
+    align-items: center;
+}
