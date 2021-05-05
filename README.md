@@ -1,4 +1,4 @@
-# Teste para vaga de: Desenvolvedor FullStack PHP
+# Teste para vaga: Desenvolvedor FullStack PHP
 
 ### Objetivo
 Desenvolver um cadastro de pacientes, do qual possamos testar toda sua capacidade de criação de arquitetura, qualidade do código, validações, elaboração de layout e usabilidade.
@@ -8,3 +8,6 @@ Desenvolver um cadastro de pacientes, do qual possamos testar toda sua capacidad
 
 ### Versão CodeIgniter
 4.0.4
+
+### Integrações externar
+ViaCEP - https://viacep.com.br/
