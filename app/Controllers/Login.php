@@ -3,13 +3,11 @@
 namespace App\Controllers;
 
 use App\Models\UsuariosModel;
-use App\Models\PessoasModel;
 use CodeIgniter\HTTP\Request;
-use Kreait\Firebase\Factory;
 
 class Login extends BaseController
 {
-    private $table = "Usuarios";
+    private $usuarios_model;
 
     function __construct()
     {
@@ -36,7 +34,7 @@ class Login extends BaseController
     {
         $dados = $this->request->getvar();
 
-        $login = $this->usuarios_model->where('usuario', $dados['usuario'])->where('senha', md5($dados['senha']))->first();
+        $login = $this->usuarios_model->find();
 
         $session = session();
 
@@ -46,8 +44,8 @@ class Login extends BaseController
             $session->setFlashdata('alert', 'success_autentication');
 
             // Insere variáveis na sessão
-            $session->set('id_usuario', $login['id_usuario']);
-            $session->set('nome', $login['usuario']);
+            $session->set('id_usuario', $login[0]['id_usuario']);
+            $session->set('nome', $login[0]['usuario']);
 
             // Guarda o último acesso do usuário
             $ultimo_acesso = date('Y-m-d H:i:s');

@@ -1,7 +1,7 @@
 <?php
 $session = session();
-$token = $session->get('token');
-if (!isset($token)) {
+$idUsuario = $session->get('id_usuario');
+if (!isset($idUsuario)) {
     echo "<script>window.location.href = '/login'; </script>";
 }
 ?>

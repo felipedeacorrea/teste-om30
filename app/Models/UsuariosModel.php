@@ -1,6 +1,8 @@
 <?php
 namespace App\Models;
+
 use CodeIgniter\Model;
+
 class UsuariosModel extends Model
 {
     protected $table = 'usuarios';
@@ -9,8 +11,6 @@ class UsuariosModel extends Model
         'id_usuario',
         'usuario',
         'senha',
-        'ultimo_acesso',
-        'ultimo_ip',
         'status'
     ];
     protected $useTimestamps = true;
@@ -18,4 +18,23 @@ class UsuariosModel extends Model
     protected $createdField  = 'data_criado';
     protected $updatedField  = 'data_atualizado';
     protected $deletedField  = 'data_deletado';
+
+    public function __construct() {
+        parent::__construct();
+        $this->table = 'usuarios';
+    }
+
+    public function getUsuarios($id = false)
+    {
+
+//        return $this->db;
+        if ($id === false)
+        {
+            return $this->findAll();
+        }
+
+        return $this->asArray()
+            ->where(['id' => $id])
+            ->first();
+    }
 }
