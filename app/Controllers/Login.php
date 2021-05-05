@@ -36,36 +36,30 @@ class Login extends BaseController
     {
         $dados = $this->request->getvar();
 
-        $usuario = $dados['usuario'];
-        $senha = $dados['senha'];
-
-        if (empty($dados)) {
-            echo $this->cimsg->error('Insira o e-mail e a senha', 'Erro no login!')->duration(4);
-            die();
-        }
+        $login = $this->usuarios_model->where('usuario', $dados['usuario'])->where('senha', md5($dados['senha']))->first();
 
         $session = session();
 
-        try {
-            $signInResult = $this->auth->signInWithEmailAndPassword($usuario, $senha);
-
-            $dados = $signInResult->data();
-
-            $nome = $dados['displayName'];
-
+        if(!empty($login))
+        {
             // Alerta de succeso de autenticação
             $session->setFlashdata('alert', 'success_autentication');
 
             // Insere variáveis na sessão
-            $session->set('nome', $nome ?? 'Sem nome');
-            $session->set('id_usuario', 1);
-            $session->set('id_pessoa', 1);
-            $session->set('id_grupo_permissao', 1);
-            $session->set('token', $signInResult->idToken());
+            $session->set('id_usuario', $login['id_usuario']);
+            $session->set('nome', $login['usuario']);
+
+            // Guarda o último acesso do usuário
+            $ultimo_acesso = date('Y-m-d H:i:s');
+            $request = \Config\Services::request();
+            $ultimo_ip = $request->getIPAddress();
+            $this->usuarios_model->set('ultimo_acesso', $ultimo_acesso)->set('ultimo_ip', $ultimo_ip)->where('id_usuario', $session->get('id_usuario'))->update();
 
             // Redireciona para a Dashboard do sistema
             return redirect()->to('/home');
-        } catch (\Kreait\Firebase\Exception\Auth\InvalidPassword | \Kreait\Firebase\Exception\InvalidArgumentException | \Kreait\Firebase\Auth\SignIn\FailedToSignIn $e) {
+        }
+        else
+        {
             // Informa que os dados estão errados
             $session->setFlashdata('alert', 'error_autentication');
 

@@ -7,8 +7,6 @@ class UsuariosModel extends Model
     protected $primaryKey = 'id_usuario';
     protected $allowedFields = [
         'id_usuario',
-        'id_pessoa',
-        'id_grupo_permissao',
         'usuario',
         'senha',
         'ultimo_acesso',
