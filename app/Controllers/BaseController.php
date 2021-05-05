@@ -46,48 +46,6 @@ class BaseController extends Controller
 		// $this->session = \Config\Services::session();
 
         helper('general');
-
-        $this->serviceAccount = ServiceAccount::fromValue(__DIR__ . '/locomotiva---representante-firebase-adminsdk-2mv80-84d222b0de.json');
-
-        $this->factory = (new Factory())->withServiceAccount($this->serviceAccount)->withDatabaseUri('https://locomotiva---representante-default-rtdb.firebaseio.com/');
-
-        $this->storage = $this->factory->createStorage();
-
-        $this->database = $this->factory->createDatabase();
-
-        $this->auth = $this->factory->createAuth();
-
-        $this->cimsg = new Cimsg();
-
-        $this->uf = [
-            0 => "Selecione a UF",
-            "AC" => "Acre",
-            "AL" => "Alagoas",
-            "AP" => "Amapá",
-            "AM" => "Amazonas",
-            "BA" => "Bahia",
-            "CE" => "Ceará",
-            "DF" => "Distrito Federal",
-            "ES" => "Espírito Santo",
-            "GO" => "Goiás",
-            "MA" => "Maranhão",
-            "MT" => "Mato Grosso",
-            "MS" => "Mato Grosso do Sul",
-            "MG" => "Minas Gerais",
-            "PA" => "Pará",
-            "PB" => "Paraíba",
-            "PR" => "Paraná",
-            "PE" => "Pernambuco",
-            "PI" => "Piauí",
-            "RJ" => "Rio de Janeiro",
-            "RN" => "Rio Grande do Norte",
-            "RS" => "Rio Grande do Sul",
-            "RO" => "Rondônia",
-            "RR" => "Roraima",
-            "SC" => "Santa Catarina",
-            "SP" => "São Paulo",
-            "SE" => "Sergipe",
-            "TO" => "Tocantins"];
 	}
 
 }

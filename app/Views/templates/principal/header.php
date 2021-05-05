@@ -83,7 +83,7 @@ if (!isset($token)) {
                     <li class="nav-item">
                         <a class="navbar-brand" href="<?= base_url()?>">
 <!--                            <img class="brand-logo" alt="modern admin logo" src="../../../app-assets/images/logo/logo.png">-->
-                            <h3 class="brand-text">LOCOMOTIVA</h3>
+                            <h3 class="brand-text">Cadastro de Pacientes</h3>
                         </a>
                     </li>
                     <li class="nav-item d-md-none">

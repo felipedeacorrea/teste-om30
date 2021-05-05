@@ -9,5 +9,5 @@ Desenvolver um cadastro de pacientes, do qual possamos testar toda sua capacidad
 ### Versão CodeIgniter
 4.0.4
 
-### Integrações externar
+### Integrações externa
 ViaCEP - https://viacep.com.br/

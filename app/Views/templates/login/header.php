@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <title>Locomotiva</title>
+    <title>Login :: Sistema de cadastro de pacientes</title>
 <!--    <link rel="apple-touch-icon" href="../../../assets/images/logo/Icon.svg">-->
 <!--    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/images/logo/Icon.svg">-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
